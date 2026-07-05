@@ -1,0 +1,55 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@import "tailwindcss";
+
+@import "./fonts.css";
+
+@theme {
+  --font-sans: "Nunito", "Hind Siliguri", system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbars suppression for horizontal slides */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* iOS & Android native webview notch/safe-area support */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
+
+/* Pre-paint background colors to prevent flickering */
+html, body {
+  background-color: #FAF6F0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.dark, html.dark body {
+  background-color: #221B19;
+}
+
+/* Dynamic entering scales for copy checks */
+@keyframes scale-in {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

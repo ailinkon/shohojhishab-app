@@ -1,0 +1,6 @@
+{
+  "name": "ShohojHishab – Unit & Land Converter",
+  "description": "A cozy, friendly mobile-first app for converting land units, general measurement units, and live currency rates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
